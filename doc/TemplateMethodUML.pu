@@ -1,0 +1,40 @@
+@startuml
+abstract class Greet {
+  +{abstract} void printUpperFrame()
+  +{abstract} void printLeftFrame()
+  +{abstract} void printRightFrame()
+  +{abstract} void printBottomFrame()
+  +{abstract} void printGreeting()
+  +void greet()
+}
+note left of Greet
+  Abstract classs
+end note
+note right of Greet::greet
+  Template method
+  CAUTION: This method is not abstract method
+end note
+
+class Hello {
+  +void printUpperFrame()
+  +void printLeftFrame()
+  +void printRightFrame()
+  +void printBottomFrame()
+  +void printGreeting()
+}
+Greet <|-- Hello
+note bottom of Hello
+  Concrete class
+end note
+
+class Goodbye {
+  +void printUpperFrame()
+  +void printLeftFrame()
+  +void printRightFrame()
+  +void printBottomFrame()
+  +void printGreeting()
+}
+Greet <|-- Goodbye
+
+@enduml
+
