@@ -1,11 +1,11 @@
 @startuml
 abstract class Greet {
-  +{abstract} void printUpperFrame()
-  +{abstract} void printLeftFrame()
-  +{abstract} void printRightFrame()
-  +{abstract} void printBottomFrame()
-  +{abstract} void printGreeting()
   +void greet()
+  -{abstract} void printUpperFrame()
+  -{abstract} void printLeftFrame()
+  -{abstract} void printRightFrame()
+  -{abstract} void printBottomFrame()
+  -{abstract} void printGreeting()
 }
 note left of Greet
   Abstract classs
@@ -16,11 +16,11 @@ note right of Greet::greet
 end note
 
 class Hello {
-  +void printUpperFrame()
-  +void printLeftFrame()
-  +void printRightFrame()
-  +void printBottomFrame()
-  +void printGreeting()
+  -void printUpperFrame()
+  -void printLeftFrame()
+  -void printRightFrame()
+  -void printBottomFrame()
+  -void printGreeting()
 }
 Greet <|-- Hello
 note bottom of Hello
@@ -28,11 +28,11 @@ note bottom of Hello
 end note
 
 class Goodbye {
-  +void printUpperFrame()
-  +void printLeftFrame()
-  +void printRightFrame()
-  +void printBottomFrame()
-  +void printGreeting()
+  -void printUpperFrame()
+  -void printLeftFrame()
+  -void printRightFrame()
+  -void printBottomFrame()
+  -void printGreeting()
 }
 Greet <|-- Goodbye
 
